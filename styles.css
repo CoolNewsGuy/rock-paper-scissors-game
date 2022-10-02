@@ -23,7 +23,8 @@ body {
 }
 
 .container {
-    height: 700px;
+    padding: 15px;
+    min-height: 700px;
     width: 700px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
@@ -31,10 +32,66 @@ body {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .container h1 {
     text-align: center;
     margin-top: 0.5em;
     color: rgb(255, 224, 85);
+}
+
+.description {
+    margin-top: 25px;
+}
+
+.description p {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-align: center;
+    color: rgb(47, 45, 179);
+}
+
+.btn-container {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play {
+    background-image: linear-gradient(
+        to right,
+        #ff6e7f 0%,
+        #bfe9ff 51%,
+        #ff6e7f 100%
+    );
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    border: none;
+    display: block;
+    padding: 20px 0px;
+    font-size: 1.5rem;
+    color: #f00f2a;
+    font-family: sans-serif;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    width: 30%;
+}
+
+#play:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #00a2ff;
+    text-decoration: none;
+    cursor: pointer;
 }
