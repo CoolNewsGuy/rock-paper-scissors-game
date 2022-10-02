@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200;400;500;700&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Sans Mono", monospace;
 }
 
 body {
@@ -29,4 +31,10 @@ body {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-top: 0.5em;
+    color: rgb(255, 224, 85);
 }
