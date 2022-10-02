@@ -24,7 +24,7 @@ function playRound(playerChoice, computerChoice) {
         } else {
             return "Oh no, you lost this round :(";
         }
-    } else {
+    } else if (playerChoice === "scissors") {
         if (computerChoice === "paper") {
             return "Hooray!!! you won this round!";
         } else if (computerChoice === "rock") {
@@ -32,5 +32,7 @@ function playRound(playerChoice, computerChoice) {
         } else {
             return "tie!";
         }
+    } else {
+        alert("Wrong input!");
     }
 }
