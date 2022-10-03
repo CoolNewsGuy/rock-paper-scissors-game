@@ -1,7 +1,19 @@
-let playBtn = document.getElementById("play");
-let container1 = document.getElementById("container-1");
-let container2 = document.getElementById("container-2");
-playBtn.addEventListener("click", hideContainer1, { once: true });
+let playBtn = document.getElementById("play"),
+    container1 = document.getElementById("container-1"),
+    container2 = document.getElementById("container-2"),
+    playerButtons = document.querySelectorAll(".player-btn"),
+    computerButtons = document.querySelectorAll(".computer-btn"),
+    buttonText;
+
+
+playBtn.addEventListener("click", hideContainer1, {
+    once: true
+});
+
+playerButtons.forEach((button) =>
+    button.addEventListener("click", getPlayerChoice)
+);
+
 
 function hideContainer1() {
     playBtn.style.cursor = "wait";
@@ -16,14 +28,12 @@ function hideContainer1() {
     }, 2500);
 }
 
+
 function showContainer2() {
     container2.style.display = "none";
     container2.classList.add("fade-in");
 }
 
-let playerButtons = document.querySelectorAll(".player-btn");
-let computerButtons = document.querySelectorAll(".computer-btn");
-let buttonText;
 
 function getPlayerChoice() {
     buttonText = this.textContent;
@@ -42,10 +52,4 @@ function getComputerChoice() {
         }
     }
     computerButtons.forEach(enlightComputerButton);
-
-    console.log(computerChoice);
 }
-
-playerButtons.forEach((button) =>
-    button.addEventListener("click", getPlayerChoice)
-);
