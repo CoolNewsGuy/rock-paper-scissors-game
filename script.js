@@ -20,3 +20,14 @@ function showContainer2() {
     container2.style.display = "none";
     container2.classList.add("fade-in");
 }
+
+let playerButtons = document.querySelectorAll(".player-btn");
+
+function getButtonText() {
+    let buttonText = this.textContent;
+    return buttonText;
+}
+
+playerButtons.forEach((button) =>
+    button.addEventListener("click", getButtonText)
+);

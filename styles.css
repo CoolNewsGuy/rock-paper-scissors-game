@@ -128,16 +128,16 @@ body {
 }
 
 #container-1 {
-    display: block;
+    display: none;
 }
 
 #container-2 {
-    display: none;
+    /* display: none; */
     position: relative;
 }
 
 #container-2 h1 {
-    display: none;
+    /* display: none; */
     margin-bottom: 40px;
 }
 
