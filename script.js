@@ -3,8 +3,6 @@ let playBtn = document.getElementById("play"),
     container2 = document.getElementById("container-2"),
     playerButtons = document.querySelectorAll(".player-btn"),
     computerButtons = document.querySelectorAll(".computer-btn"),
-    playerScore = document.getElementById('player-score'),
-    copmuterScore = document.getElementById('computer-score'),
     buttonText;
 
 
@@ -44,16 +42,49 @@ function getPlayerChoice() {
 
 
 function getComputerChoice() {
-    let choices = ["Rock", "Paper", "Scissors"];
-    let computerChoice = choices[Math.floor(Math.random() * 3)];
-    let playerChoice = buttonText.toLowerCase();
+    let choices = ["rock", "paper", "scissors"],
+        computerChoice = choices[Math.floor(Math.random() * 3)],
+        playerChoice = buttonText.toLowerCase(),
+        playerScore = document.getElementById('player-score'),
+        copmuterScore = document.getElementById('computer-score'),
+        playerScoreValue = +playerScore.textContent,
+        copmuterScoreValue = +copmuterScore.textContent;
 
     function enlightComputerButton(button) {
-        if (computerChoice === button.textContent) {
+        if (computerChoice === button.textContent.toLowerCase()) {
             button.classList.add(`computer-choice-${button.textContent.toLowerCase()}`);
             setTimeout(() => button.classList.remove(`computer-choice-${button.textContent.toLowerCase()}`), 500)
         }
     }
 
+    function increaseScore() {
+        if (playerChoice === 'rock') {
+            if (computerChoice === 'paper') {
+                copmuterScoreValue++;
+                copmuterScore.textContent = copmuterScoreValue;
+            } else if (computerChoice === 'scissors') {
+                playerScoreValue++;
+                playerScore.textContent = playerScoreValue;
+            }
+        } else if (playerChoice === 'paper') {
+            if (computerChoice === 'rock') {
+                playerScoreValue++;
+                playerScore.textContent = playerScoreValue;
+            } else if (computerChoice === 'scissors') {
+                copmuterScoreValue++;
+                copmuterScore.textContent = copmuterScoreValue;
+            }
+        } else {
+            if (computerChoice === 'rock') {
+                copmuterScoreValue++;
+                copmuterScore.textContent = copmuterScoreValue;
+            } else if (computerChoice === 'paper') {
+                playerScoreValue++;
+                playerScore.textContent = playerScoreValue;
+            }
+        }
+    }
+
+    increaseScore()
     computerButtons.forEach(enlightComputerButton);
 }
