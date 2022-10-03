@@ -20,11 +20,3 @@ function showContainer2() {
     container2.style.display = "none";
     container2.classList.add("fade-in");
 }
-
-// computer choice
-function getComputerChoice() {
-    let choices = ["rock", "paper", "scissors"];
-    let choice = choices[Math.floor(Math.random() * 3)];
-
-    return choice;
-}
