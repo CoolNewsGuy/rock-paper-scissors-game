@@ -211,7 +211,8 @@ body {
     color: orange;
 }
 
-.player-rock:hover {
+.player-rock:hover,
+.computer-choice:hover {
     background: #f4a460;
     color: black;
 }
@@ -222,7 +223,8 @@ body {
     color: red;
 }
 
-.player-paper:hover {
+.player-paper:hover,
+.computer-choice:hover {
     background: red;
     color: black;
 }
@@ -233,7 +235,8 @@ body {
     color: #018ee6;
 }
 
-.player-scissors:hover {
+.player-scissors:hover,
+.computer-choice:hover {
     color: black;
     background: #4169e1;
 }
