@@ -22,6 +22,7 @@ function showContainer2() {
 }
 
 let playerButtons = document.querySelectorAll(".player-btn");
+let computerButtons = document.querySelectorAll(".computer-btn");
 let buttonText;
 
 function getPlayerChoice() {
@@ -29,9 +30,18 @@ function getPlayerChoice() {
     getComputerChoice();
 }
 
+
 function getComputerChoice() {
     let choices = ["Rock", "Paper", "Scissors"];
     let computerChoice = choices[Math.floor(Math.random() * 3)];
+
+    function enlightComputerButton(button) {
+        if (computerChoice === button.textContent) {
+            button.classList.add(`computer-choice-${button.textContent.toLowerCase()}`);
+            setTimeout(() => button.classList.remove(`computer-choice-${button.textContent.toLowerCase()}`), 500)
+        }
+    }
+    computerButtons.forEach(enlightComputerButton);
 
     console.log(computerChoice);
 }
