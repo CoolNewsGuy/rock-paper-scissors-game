@@ -127,17 +127,12 @@ body {
     }
 }
 
-#container-1 {
-    display: none;
-}
-
 #container-2 {
-    /* display: none; */
+    display: none;
     position: relative;
 }
 
 #container-2 h1 {
-    /* display: none; */
     margin-bottom: 40px;
 }
 
