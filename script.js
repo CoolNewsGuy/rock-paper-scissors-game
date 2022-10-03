@@ -3,6 +3,8 @@ let playBtn = document.getElementById("play"),
     container2 = document.getElementById("container-2"),
     playerButtons = document.querySelectorAll(".player-btn"),
     computerButtons = document.querySelectorAll(".computer-btn"),
+    playerScore = document.getElementById('player-score'),
+    copmuterScore = document.getElementById('computer-score'),
     buttonText;
 
 
@@ -44,6 +46,7 @@ function getPlayerChoice() {
 function getComputerChoice() {
     let choices = ["Rock", "Paper", "Scissors"];
     let computerChoice = choices[Math.floor(Math.random() * 3)];
+    let playerChoice = buttonText.toLowerCase();
 
     function enlightComputerButton(button) {
         if (computerChoice === button.textContent) {
@@ -51,5 +54,6 @@ function getComputerChoice() {
             setTimeout(() => button.classList.remove(`computer-choice-${button.textContent.toLowerCase()}`), 500)
         }
     }
+
     computerButtons.forEach(enlightComputerButton);
 }
