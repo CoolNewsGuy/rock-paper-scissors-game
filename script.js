@@ -22,12 +22,20 @@ function showContainer2() {
 }
 
 let playerButtons = document.querySelectorAll(".player-btn");
+let buttonText;
 
-function getButtonText() {
-    let buttonText = this.textContent;
-    return buttonText;
+function getPlayerChoice() {
+    buttonText = this.textContent;
+    getComputerChoice();
+}
+
+function getComputerChoice() {
+    let choices = ["Rock", "Paper", "Scissors"];
+    let computerChoice = choices[Math.floor(Math.random() * 3)];
+
+    console.log(computerChoice);
 }
 
 playerButtons.forEach((button) =>
-    button.addEventListener("click", getButtonText)
+    button.addEventListener("click", getPlayerChoice)
 );
