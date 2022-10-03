@@ -212,9 +212,9 @@ body {
 }
 
 .player-rock:hover,
-.computer-choice:hover {
-    background: #f4a460;
-    color: black;
+.computer-choice-rock {
+    background: #f4a460 !important;
+    color: black !important;
 }
 
 .player-paper,
@@ -224,9 +224,9 @@ body {
 }
 
 .player-paper:hover,
-.computer-choice:hover {
-    background: red;
-    color: black;
+.computer-choice-paper {
+    background: red !important;
+    color: black !important;
 }
 
 .player-scissors,
@@ -236,7 +236,7 @@ body {
 }
 
 .player-scissors:hover,
-.computer-choice:hover {
-    color: black;
-    background: #4169e1;
+.computer-choice-scissors {
+    color: black !important;
+    background: #4169e1 !important;
 }
