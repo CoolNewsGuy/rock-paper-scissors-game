@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=McLaren"
+            rel="stylesheet"
+        />
         <title>Rock Paper Scissors</title>
     </head>
     <body>
@@ -27,14 +31,6 @@
                     -The player with the highest score wins!
                 </p>
                 <br />
-                <p>
-                    <strong
-                        ><em
-                            >Note: The input checker is case-insensitive (e.g.,
-                            Rock = rock, RoCK = rock).
-                        </em></strong
-                    >
-                </p>
 
                 <p style="margin-top: 50px">
                     If you are ready to play, Click the button below!
@@ -44,7 +40,27 @@
                 <button id="play">Play</button>
             </div>
         </div>
-        <div class="container" id="container-2"></div>
+        <div class="container" id="container-2">
+            <h1>Let the game begin!!!</h1>
+            <div class="score">
+                <div class="score-circle" id="player-score">0</div>
+                <div class="score-circle" id="computer-score">0</div>
+            </div>
+            <div class="side" id="player-side"><h2>You choose:</h2></div>
+            <div class="side" id="computer-side">
+                <h2>Computer chooses:</h2>
+            </div>
+            <div class="player-options">
+                <button class="btn player-btn player-rock">Rock</button>
+                <button class="btn player-btn player-paper">Paper</button>
+                <button class="btn player-btn player-scissors">Scissors</button>
+            </div>
+            <div class="computer-options">
+                <button class="btn computer-rock">Rock</button>
+                <button class="btn computer-paper">Paper</button>
+                <button class="btn computer-scissors">Scissors</button>
+            </div>
+        </div>
         <script src="./script.js"></script>
     </body>
 </html>
